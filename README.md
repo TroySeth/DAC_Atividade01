@@ -1,10 +1,16 @@
 # DAC_Atividade01
 
-## arquivo dotenv
+## arquivo dotenv:
 ```
 PG_HOST =
 PG_PORT =
 PG_USERNAME =
 PG_PASSWORD = 
 PG_DATABASE = 
+```
+
+## instalar dependencias:
+```
+npm i
+
 ```
