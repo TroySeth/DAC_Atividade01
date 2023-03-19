@@ -40,8 +40,8 @@ const listarLivrosPorTitulo = (req, res) => {
   const titulo = req.body.titulo;
 
   Livro.findAll({
-    where: { titulo: titulo }
-  }).then((livros) => {
+    where: { titulo: titulo } 
+   }).then((livros) => {
       res.status(200).json(livros);
     }).catch((error) => {
       res.status(400).send(error);

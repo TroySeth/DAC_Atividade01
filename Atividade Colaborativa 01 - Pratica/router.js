@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const livroController  = require('./src/controllers/livroController');
 const editoraController  = require('./src/controllers/editoraController');
+const path = require('path');
 
 router.get('/',(req,res)=>{
-    res.send("oi");
+    res.sendFile(path.resolve(__dirname,"src","views","index.html"));
 })
 
 //livros

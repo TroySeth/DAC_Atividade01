@@ -6,15 +6,15 @@ const Livro = database.define('livro', {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
-      },
-      titulo: {
+    },
+    titulo: {
         type: Sequelize.STRING(80),
         allowNull: false,
-      },
-      dataDeLancamento: {
+    },
+    dataDeLancamento: {
         type: Sequelize.DATE,
         allowNull: false,
-      },
+    },
 }, { tableName: 'livro' })
 
 Livro.sync();

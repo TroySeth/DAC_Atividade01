@@ -9,8 +9,6 @@ app.use(bodyParser.json());
 app.use(router);
 app.use(express.json());
 app.use(express.urlencoded({extended: true }));
-
-
-
+app.use(express.static('views'));
 
 app.listen(3000,console.log("http://localhost:3000/"));
