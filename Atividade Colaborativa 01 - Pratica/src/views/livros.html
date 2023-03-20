@@ -30,12 +30,10 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             font-size: 0.9em;
         }
-
-
     </style>
 </head>
+
 <body>
-    
     <div class="menu">
         <nav>
             <a href="#"></a>
@@ -48,10 +46,9 @@
     </div>
 
     <script>
-
         const container = document.querySelector(".container");
 
-       fetch('/listarLivros').then((resposta)=>{
+        fetch('/listaDeLivros').then((resposta)=>{
             return resposta.json();
        }).then((res)=>{
             console.log(res);
@@ -75,12 +72,9 @@
                 div.appendChild(dataDeLancamento);
 
             });
-       }).catch((error)=>{
+       }).catch(error => {
             console.log(error);
        });
-
-
-
     </script>
 </body>
 </html>

@@ -48,10 +48,9 @@
     </div>
 
     <script>
-
         const container = document.querySelector(".container");
 
-       fetch('/listarLivros').then((resposta)=>{
+       fetch('/listaDeEditoras').then((resposta)=>{
             return resposta.json();
        }).then((res)=>{
             console.log(res);
@@ -78,9 +77,6 @@
        }).catch((error)=>{
             console.log(error);
        });
-
-
-
     </script>
 </body>
 </html>
