@@ -64,14 +64,14 @@
 
                 container.appendChild(div);
 
-                const titulo = document.createElement("p");
-                const dataDeLancamento = document.createElement("p");
+                const localOrigem = document.createElement("p");
+                const nomeFantasia = document.createElement("p");
 
-                titulo.innerHTML = `Titulo: ${l.titulo}`;
-                dataDeLancamento.innerHTML = `Data: ${l.dataDeLancamento}`;
+                localOrigem.innerHTML = `Local de Origem: ${l.localDeOrigem}`;
+                nomeFantasia.innerHTML = `Nome Fantasia: ${l.nomeFantasia}`;
 
-                div.appendChild(titulo);
-                div.appendChild(dataDeLancamento);
+                div.appendChild(localOrigem);
+                div.appendChild(nomeFantasia);
 
             });
        }).catch((error)=>{
