@@ -9,31 +9,27 @@ router.get('/',(req,res) => {
 });
 
 //livros
-
 router.post('/criarLivro',livroController.criarLivro);
-
 router.get('/listaDeLivros',livroController.listarLivros);
-
 router.get('/livros',(req, res) => {
     res.sendFile(path.resolve(__dirname,"src","views","livros.html"));
 });
-
+router.get('/editarLivro',(req, res) => {
+    res.sendFile(path.resolve(__dirname,"src","views","editarLivro.html"));
+})
 router.put('/editarLivros',livroController.editarLivro);
-
 router.get('/listarLivrosPorTitulo',livroController.listarLivrosPorTitulo);
 
 //editora
-
 router.post('/criarEditora',editoraController.criarEditora);
-
 router.get('/listaDeEditoras',editoraController.listarEditoras);
-
 router.get('/editoras',(req, res) => {
     res.sendFile(path.resolve(__dirname,"src","views","editoras.html"));
 });
-
+router.get('/editarEditora',(req, res) => {
+    res.sendFile(path.resolve(__dirname,"src","views","editarEditora.html"));
+})
 router.put('/editarEditora',editoraController.editarEditora);
-
 router.get('/listarEditorasPorLocalDeOrigem',editoraController.listarEditorasPorLocalDeOrigem);
 
 module.exports = router;
