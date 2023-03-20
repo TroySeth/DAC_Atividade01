@@ -14,3 +14,9 @@ PG_DATABASE =
 npm i
 
 ```
+
+## rodar aplicação:
+```
+npm start
+
+```
