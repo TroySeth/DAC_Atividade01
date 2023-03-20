@@ -31,8 +31,14 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             font-size: 0.9em;
         }
-
-
+        #buttonEdit{
+            align-content: end;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        #divEdit{
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -57,23 +63,33 @@
             console.log(res);
             res.map((l)=>{
 
-                // const titulo = l.titulo;
-                // const dataDeLancamento = l.dataDeLancamento;
-
                 const div = document.createElement("div");
+                const divEdit = document.createElement("div");
                 div.setAttribute("class","card");
+                divEdit.setAttribute("id", "divEdit");
 
                 container.appendChild(div);
 
                 const localOrigem = document.createElement("p");
                 const nomeFantasia = document.createElement("p");
+                const a = document.createElement("a");
+
+                a.setAttribute("href","/editarEditora");
+
+                const button = document.createElement("button");
+                button.textContent = "Edit";
+                button.setAttribute("id", "buttonEdit");
+
+                a.appendChild(button);
+
+                divEdit.appendChild(a);
 
                 localOrigem.innerHTML = `Local de Origem: ${l.localDeOrigem}`;
                 nomeFantasia.innerHTML = `Nome Fantasia: ${l.nomeFantasia}`;
 
+                div.appendChild(divEdit);
                 div.appendChild(localOrigem);
                 div.appendChild(nomeFantasia);
-
             });
        }).catch((error)=>{
             console.log(error);

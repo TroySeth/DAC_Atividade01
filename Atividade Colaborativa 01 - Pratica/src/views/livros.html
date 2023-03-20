@@ -75,7 +75,7 @@
                 const dataDeLancamento = document.createElement("p");
                 const a = document.createElement("a");
 
-                a.setAttribute("href","/");
+                a.setAttribute("href","/editarLivro");
 
                 const button = document.createElement("button");
                 button.textContent = "Edit";
@@ -88,7 +88,7 @@
                 titulo.innerHTML = `Titulo: ${l.titulo}`;
                 dataDeLancamento.innerHTML = `Data: ${l.dataDeLancamento}`;
 
-                div.appendChild(divEdit)
+                div.appendChild(divEdit);
                 div.appendChild(titulo);
                 div.appendChild(dataDeLancamento);
             });
